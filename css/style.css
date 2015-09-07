@@ -13,13 +13,6 @@ body
     color:#000;
     background:#FFF;
 }
-thead
-{
-    background-color: #74cef0;
-    color: #fff;
-    height: 50px;
-    font-size: 14px;
-}
 a, a:visited
 {
     color:darkblue;
@@ -129,17 +122,6 @@ h2
     width:80px;
 }
 
-.whoisrow1, .whoisrow1available
-{
-    background-color: #efefef;
-    border-top:1px solid #D4D0C8;
-}
-.whoisrow2, .whoisrow2available
-{
-    background:#FFF;
-    border-top:1px solid #D4D0C8;
-}
-
 #verhuman
 {
     text-align:center;
@@ -154,6 +136,45 @@ h2
 .verhumanimg
 {
     border:1px solid #000;
+}
+
+
+/*Change Colors template*/
+
+
+.bannerColor
+{
+    background:#efefef none repeat scroll 0 0;
+}
+
+#logo
+{
+    background: transparent url("http://neo.site/asset/nx/images/logo.png") no-repeat scroll;
+    width: 100%;
+    height: 70px;
+    text-indent: -3333px;
+    border: 0;
+    margin: 0;
+}
+
+.whoisrow1, .whoisrow1available
+{
+    background-color: #efefef;
+    border-top:1px solid #D4D0C8;
+}
+
+.whoisrow2, .whoisrow2available
+{
+    background:#FFF;
+    border-top:1px solid #D4D0C8;
+}
+
+thead
+{
+    background-color: #74cef0;
+    color: #ffffff;
+    height: 50px;
+    font-size: 14px;
 }
 
 .error

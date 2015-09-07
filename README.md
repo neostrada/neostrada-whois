@@ -9,7 +9,7 @@ Om de script te kunnen gebruiken heb je een API Key en Secret nodig.
 Log in op https://www.neostrada.nl/inloggen.html en klik vervolgens links op API in het menu
 
 ## Aanpassing ##
-Pas de volgende code aan in example.php.
+Pas de volgende code aan in functions onder functie APICall.
 
 ```js
 /**

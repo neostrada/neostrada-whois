@@ -11,6 +11,72 @@
     class domainAPI extends Neostrada
     {
 
+        public function APICall()
+        {
+            $Error = '';
+            $API = Neostrada::GetInstance();
+
+            /**
+             * Your API information can be found after logging in to the website
+             */
+
+            $API->SetAPIKey('[API_Key]');
+            $API->SetAPISecret('[API_Secret]');
+
+            /**
+             * Get all extensions from our website
+             */
+            $API->prepare('extensions');
+            $API->execute();
+            $Result = $API->fetch();
+
+            /**
+             * Check if you have calls left
+             */
+
+            if ($Result['code'] == 429) {
+
+                $Error = '<div class="error">Too Many Requests</div>';
+
+            } elseif ($Result['code'] == 540) {
+
+                $Error = '<div class="error">Invalid API Key or Secret</div>';
+            }
+            $CountResult = count($Result['extensions']);
+            $GetExtenions = $this->GetExtensions($CountResult, $Result);
+            return array($Error, $API, $Result, $CountResult, $GetExtenions);
+        }
+
+        public function CheckPost($CountResult, $API, $Result)
+        {
+            $Domain = str_replace('http://', '', $_POST['domain']);
+            $Domain = str_replace('www.', '', $Domain);
+            $Domain = htmlentities($Domain);
+            $Domain = strtolower($Domain);
+            $ext = $_POST['tld'];
+
+            if ($ext == 'all') {
+
+                for ($i = 0; $i < $CountResult; $i++) {
+
+                    $this->GetInfo($API, $Domain, $Result['extensions'], $i);
+
+                }
+            } else {
+
+                $this->GetInfo($API, $Domain, $Result['extensions']);
+
+
+            }
+
+            echo "<script type='text/javascript'>
+                            if(document.getElementById('whoiswait'))
+                            {
+                                document.getElementById('whoiswait').style.display = 'none';
+                            }
+                          </script>";
+        }
+
         /**
          * @param $API
          * @param $domain
