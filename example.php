@@ -11,7 +11,7 @@ require_once dirname(__FILE__) . '/function/functions.php';
  */
 $DomainApi = new domainAPI();
 /**
- * @return array
+ * @return array 
  */
 list($Error, $API, $Result, $CountResult, $GetExtenions) = $DomainApi->APICall();
 
