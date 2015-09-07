@@ -20,9 +20,11 @@ $API->SetAPIKey('[API_Key]');
 $API->SetAPISecret('[API_Secret]');
 ```
 
+Verander `[API_Key]` en `[API_Secret]` naar de gegevens die je vanuit je Neostrada account hebt meegekregen.
+
 ## License ##
 [BSD (Berkeley Software Distribution) License](http://www.opensource.org/licenses/bsd-license.php).
 Copyright (c) 2012, Avot Media BV
 
 ## Support ##
-[www.neostrada.nl](https://www.neostrada.nl) - support@neostrada.nl 
+[www.neostrada.nl](https://www.neostrada.nl) - support@neostrada.nl
