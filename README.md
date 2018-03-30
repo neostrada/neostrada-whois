@@ -2,7 +2,7 @@
 =================
 
 # neostrada-whois PHP voorbeeldscript
-Simpel en snel je eigen whoIs opzetten
+Simpel en snel je eigen who-Is opzetten
 
 ## API Key en Secret ##
 Om de script te kunnen gebruiken heb je een API Key en Secret nodig.
